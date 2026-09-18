@@ -1,0 +1,8 @@
+import type { CardType, HistoryCardType, Nation } from './types.js';
+export const NATIONS:Nation[]=['秦','齐','楚','赵','魏','韩','燕'];
+export const HISTORY_CARD_TYPES:HistoryCardType[]=['Alliance','BreakAlliance','WeiRescue','Apology','FarClose','Diplomat','Spy','Horsemanry'];
+export const CARD_LABELS:Record<CardType,string>={Wasteland:'荒地',Farmland:'农田',Strategist:'谋士',Lord:'君主',Cavalry:'骑兵',Banner:'旌旗',Pass:'关隘',City:'城邑',Wanderer:'游侠'};
+export const HISTORY_LABELS:Record<HistoryCardType,string>={Alliance:'合纵之盟',BreakAlliance:'连横破盟',WeiRescue:'围魏救赵',Apology:'负荆请罪',FarClose:'远交近攻',Diplomat:'纵横家',Spy:'反间计',Horsemanry:'胡服骑射'};
+export const BOARD_SPECS={2:{gridSize:5,lordCol:3,hegemony:1,forced:2},3:{gridSize:5,lordCol:3,hegemony:1,forced:2},4:{gridSize:7,lordCol:4,hegemony:2,forced:3},5:{gridSize:7,lordCol:4,hegemony:2,forced:3},6:{gridSize:7,lordCol:4,hegemony:2,forced:3},7:{gridSize:9,lordCol:5,hegemony:3,forced:4}} as const;
+export const SLOT_LIMITS={5:{swap:3,discard:2,envoy:2,command:1},7:{swap:4,discard:3,envoy:3,command:2},9:{swap:5,discard:4,envoy:4,command:3}} as const;
+export const TALENT_COUNTS:Record<number,Partial<Record<CardType,number>>>={2:{Farmland:5,Strategist:4,Cavalry:2,Banner:2,Pass:4,City:4,Wanderer:2,Lord:2},3:{Farmland:5,Strategist:4,Cavalry:3,Banner:3,Pass:5,City:5,Wanderer:2,Lord:3},4:{Farmland:8,Strategist:7,Cavalry:4,Banner:4,Pass:6,City:6,Wanderer:3,Lord:4},5:{Farmland:9,Strategist:7,Cavalry:5,Banner:5,Pass:7,City:7,Wanderer:4,Lord:5},6:{Farmland:8,Strategist:7,Cavalry:5,Banner:5,Pass:7,City:7,Wanderer:4,Lord:6},7:{Farmland:12,Strategist:10,Cavalry:7,Banner:7,Pass:8,City:8,Wanderer:4,Lord:7}};
